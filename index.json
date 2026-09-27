@@ -1,0 +1,27 @@
+{
+  "schema": "pascalpatch/registry-index/1",
+  "entries": [
+    {
+      "id": "input-display",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/input-display-v1.0.0/input-display-1.0.0.zip",
+      "sha256": "9d6aafb0d4307dcac646a9e33f0bf63bab6cbaa4b3a27a0e8fd2ed69b36f0574",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
+      "id": "unlock-all",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/unlock-all-v1.0.0/unlock-all-1.0.0.zip",
+      "sha256": "f8ea9e5ca55ed0ea122e0211e00a84a05305762683731b6b53f5c86aa378357c",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    }
+  ],
+  "key_id": "bae2cb542510218e",
+  "signature": "N8+AMiNQIOL8IXfJWjhp3JiDSric0bjJvWKyW3eUcU5QmbvhmfPU4xO2aUzo1JI3BSxh/tjO5MZPf8quBb+PDA=="
+}
