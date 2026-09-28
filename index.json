@@ -102,6 +102,16 @@
       "maintainer": "PascalPatch"
     },
     {
+      "id": "quick-match",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/quick-match-v1.0.0/quick-match-1.0.0.zip",
+      "sha256": "7406852eacc0ae12c0bb7dbe23cb8253657448d480581456d62b9c78e6780d63",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
       "id": "tech-trainer",
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/tech-trainer-v1.0.0/tech-trainer-1.0.0.zip",
@@ -183,5 +193,5 @@
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "aufhQ5G57Vns72th9hfceFcGP0flRVVoqcyfNBIESnUoFbs5NcnMvWN7k8R4UHceqMCeAgMScI1bGkKTfZriCQ=="
+  "signature": "GXuJW5Xqbe5PSu2oHv3dvsedwXRdY48gBbXTA0BZ9zc5WeOZTc5ROwwGO6ycgjrZfxqx6sTazciKn8Chs6eRAw=="
 }
