@@ -1,6 +1,6 @@
 {
   "schema": "pascalpatch/plugin-catalog/1",
-  "generated": 1790584708,
+  "generated": 1790586998,
   "site": "https://dylan-demolder.github.io/pascalpatch-plugins/",
   "plugins": [
     {
@@ -51,7 +51,7 @@
       ],
       "icon": null,
       "changelog": [],
-      "updated": 1790560681
+      "updated": 1790586997
     },
     {
       "id": "di-trainer",
@@ -95,7 +95,7 @@
       ],
       "icon": null,
       "changelog": [],
-      "updated": 1790564286
+      "updated": 1790586997
     },
     {
       "id": "frame-data",
@@ -176,7 +176,7 @@
           "notes": "Shield advantage was 3 to 6 frames too harsh: the defender counted as free as soon as shield hitlag ended. It now waits for shield stun to end (checked frame by frame: Dr. Mario's jab is -10 on shield, not -13)."
         }
       ],
-      "updated": 1790580378
+      "updated": 1790586998
     },
     {
       "id": "hitbox-viewer",
@@ -222,7 +222,7 @@
       ],
       "icon": null,
       "changelog": [],
-      "updated": 1790563046
+      "updated": 1790586998
     },
     {
       "id": "info-display",
@@ -375,7 +375,7 @@
           "notes": "On PascalPatch 0.5 the panels share the top corners with other plugins' panels instead of drawing over them."
         }
       ],
-      "updated": 1790580379
+      "updated": 1790586998
     },
     {
       "id": "input-display",
@@ -494,7 +494,7 @@
       ],
       "icon": null,
       "changelog": [],
-      "updated": 1790560681
+      "updated": 1790586998
     },
     {
       "id": "quick-match",
@@ -993,7 +993,7 @@
           "notes": "Five new coaches, after UnclePunch's Training Mode: out-of-shield timing (the first action after shield stun and on which frame), powershields (or how many frames early the L/R press was), ledgedashes (intangibility left once the landing lag ends), SDI (inputs during hitlag and the distance moved) and fastfall timing (frames after the jump's peak). On PascalPatch 0.5 the tally shares the corner with other plugins' panels."
         }
       ],
-      "updated": 1790580379
+      "updated": 1790586998
     },
     {
       "id": "training-lab",
@@ -1514,7 +1514,7 @@
           "notes": "Savestates and a practice dummy (both need PascalPatch 0.5). Savestates: D-pad right (or End) saves the moment, D-pad left (or Delete) puts it back, as often as you like, or have it come back on its own after each try, as a drill. The dummy: pick a human port and it stands, crouches, shields or jumps; DIs (survival, combo, in, out, random) and SDIs; techs in place, toward or away, or misses and gets up the way you choose; answers the end of hitstun or shield stun with an action on the first possible frame (out-of-shield grabs, jump-cancelled up-Bs, spot dodges, nairs...); recovers to the stage when knocked off; mashes out of grabs; and plays back inputs you record (PageUp to record, PageDown to play, Home to switch the dummy on and off)."
         }
       ],
-      "updated": 1790583417
+      "updated": 1790586998
     },
     {
       "id": "unlock-all",
@@ -1634,7 +1634,7 @@
           "notes": "The verdict and the tip now sit inside the breakdown panel (wrapped to fit), so they no longer land on Tech Trainer's lines; on PascalPatch 0.5 the panel shares its corner with other plugins' panels."
         }
       ],
-      "updated": 1790580379
+      "updated": 1790586998
     }
   ]
 }
