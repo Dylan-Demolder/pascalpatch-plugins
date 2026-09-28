@@ -2,10 +2,60 @@
   "schema": "pascalpatch/registry-index/1",
   "entries": [
     {
+      "id": "combo-counter",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/combo-counter-v1.0.0/combo-counter-1.0.0.zip",
+      "sha256": "093ec9c0d3b536592fd1ceca9da35156769dbc81a8bcc19386c17b90b42ce95e",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
+      "id": "frame-data",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/frame-data-v1.0.0/frame-data-1.0.0.zip",
+      "sha256": "528afec0e126a391fa32cee8ceb286a002ff8fa40dc3c6ff65f4c0d8d5689741",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
       "id": "input-display",
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/input-display-v1.0.0/input-display-1.0.0.zip",
       "sha256": "9d6aafb0d4307dcac646a9e33f0bf63bab6cbaa4b3a27a0e8fd2ed69b36f0574",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
+      "id": "match-stats",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/match-stats-v1.0.0/match-stats-1.0.0.zip",
+      "sha256": "69785702f6065e4104f3086d25c3788d987e3873617fd9ee5a2b0c08a51cb988",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
+      "id": "tech-trainer",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/tech-trainer-v1.0.0/tech-trainer-1.0.0.zip",
+      "sha256": "3622383563106874788574d7376873577a4af306018318940895f7c8bff3cf58",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
+      "id": "training-lab",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/training-lab-v1.0.0/training-lab-1.0.0.zip",
+      "sha256": "fc154728fc69ff6ae80acb52d936d3a21eb9e28df76e7cce97522f939b6c2708",
       "license": "GPL-2.0-or-later",
       "compatibility": "offline-only",
       "dependencies": [],
@@ -20,8 +70,18 @@
       "compatibility": "offline-only",
       "dependencies": [],
       "maintainer": "PascalPatch"
+    },
+    {
+      "id": "unlock-all",
+      "version": "1.1.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/unlock-all-v1.1.0/unlock-all-1.1.0.zip",
+      "sha256": "107755a39c1acfb81aebf31ef17ca8cc16a73ae0e571b713f8fb40c3abd701f8",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "N8+AMiNQIOL8IXfJWjhp3JiDSric0bjJvWKyW3eUcU5QmbvhmfPU4xO2aUzo1JI3BSxh/tjO5MZPf8quBb+PDA=="
+  "signature": "bZkh3/m5ULRhjPmwbzeB7+vtAKy5XVW0zxgXfLwcdDMaPBEeyPWmZAUvgJ7xrkutDIiGbZUDShDDFK/2712VDQ=="
 }

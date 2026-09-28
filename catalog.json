@@ -1,8 +1,130 @@
 {
   "schema": "pascalpatch/plugin-catalog/1",
-  "generated": 1790545748,
+  "generated": 1790560752,
   "site": "https://dylan-demolder.github.io/pascalpatch-plugins/",
   "plugins": [
+    {
+      "id": "combo-counter",
+      "name": "Combo Counter",
+      "summary": "Counts the hits and damage of every combo as it lands, and keeps each player's best combo of the match.",
+      "description": "A live combo counter: while a combo is running, `4 HITS 37%` in the attacker's colour under the\ntimer; when it ends, the total stays up for a moment (`5 hit combo, 52%, KILL`). Each player's\nbest combo of the match is kept in the bottom-right corner.\n\nA combo lasts while the victim stays punished (hit, tumbling, grabbed, thrown, knocked down,\nteching) or gets fewer than 45 frames to act between hits: the same rule Slippi's stats use, so\nthe numbers agree with the replays you are used to. Both the threshold and the minimum number of\nhits to show are settings.\n\nRead-only: it never changes the game.",
+      "author": "PascalPatch",
+      "tags": [
+        "hud",
+        "training",
+        "stats"
+      ],
+      "homepage": null,
+      "abi": 1,
+      "min_runtime": "0.3",
+      "settings": [
+        {
+          "key": "min_hits",
+          "type": "int",
+          "label": "Show combos from this many hits",
+          "default": 2,
+          "min": 1,
+          "max": 10
+        },
+        {
+          "key": "reset",
+          "type": "int",
+          "label": "Frames free before a combo ends",
+          "default": 45,
+          "min": 10,
+          "max": 120
+        },
+        {
+          "key": "best",
+          "type": "bool",
+          "label": "Keep each player's best combo on screen",
+          "default": true
+        },
+        {
+          "key": "opacity",
+          "type": "float",
+          "label": "Opacity",
+          "default": 0.95,
+          "min": 0.3,
+          "max": 1.0
+        }
+      ],
+      "icon": null,
+      "changelog": [],
+      "updated": 1790560681
+    },
+    {
+      "id": "frame-data",
+      "name": "Frame Data",
+      "summary": "Shows each fighter's action state, frame, hitlag and hitstun, and who is plus after every hit or shield.",
+      "description": "Frame data on screen while you play, the way the practice tools in modern fighting games show it.\n\n**State panels.** One small panel per fighter (port 1, ports 1 and 2, or everyone): the character,\nwhat they are doing (\"Nair f7\", \"Guard\", \"DamageFlyN\"), and chips for hitlag, hitstun and\n\"CAN ACT\", the moment the fighter can move again. A thin bar along the bottom is their shield.\n\n**Frame advantage.** Every time an attack connects, on a body or on a shield, the plugin counts\nthe frames until each side can act again and shows the difference under the attacker's panel:\n\n- `Jab on shield -13`: the defender can act 13 frames before you, so they can punish.\n- `Nair on shield -24 (landed 12f later)`: aerials are only as safe as they are low; this one hit\n  12 frames before landing. Hit lower (or L-cancel) and the number climbs.\n- `Usmash: true combo`: the second hit came before the defender could act.\n\nPositive numbers mean you are plus (green), negative mean minus (red). Pausing the game stops the\nclock. Turn on **Show state ids and positions** to see raw action state ids and coordinates, handy\nwhen you are writing a plugin of your own.\n\nRead-only: it never changes the game.",
+      "author": "PascalPatch",
+      "tags": [
+        "hud",
+        "training",
+        "frame data"
+      ],
+      "homepage": null,
+      "abi": 1,
+      "min_runtime": "0.3",
+      "settings": [
+        {
+          "key": "ports",
+          "type": "choice",
+          "label": "Fighters",
+          "default": "p1p2",
+          "options": [
+            {
+              "value": "p1",
+              "label": "Port 1"
+            },
+            {
+              "value": "p1p2",
+              "label": "Ports 1 and 2"
+            },
+            {
+              "value": "all",
+              "label": "All ports"
+            }
+          ]
+        },
+        {
+          "key": "panels",
+          "type": "bool",
+          "label": "State panels",
+          "default": true
+        },
+        {
+          "key": "advantage",
+          "type": "bool",
+          "label": "Frame advantage after hits and shields",
+          "default": true
+        },
+        {
+          "key": "toast",
+          "type": "bool",
+          "label": "Also pop up each result",
+          "default": false
+        },
+        {
+          "key": "detail",
+          "type": "bool",
+          "label": "Show state ids and positions",
+          "default": false
+        },
+        {
+          "key": "opacity",
+          "type": "float",
+          "label": "Opacity",
+          "default": 0.9,
+          "min": 0.3,
+          "max": 1.0
+        }
+      ],
+      "icon": null,
+      "changelog": [],
+      "updated": 1790560681
+    },
     {
       "id": "input-display",
       "name": "Input Display",
@@ -86,6 +208,255 @@
       "updated": 1790545748
     },
     {
+      "id": "match-stats",
+      "name": "Match Stats",
+      "summary": "Openings, kills, damage per opening, neutral wins, L-cancel rate and inputs per minute for every match, with a history file.",
+      "description": "The numbers behind every match, Slippi-style, with no Slippi involved.\n\nWhen a match ends, a card shows each player's:\n\n- **Kills** and **openings** (punishes started), **openings per kill** and **damage per\n  opening**: how well you convert.\n- **Neutral wins**: openings started while nobody was being punished.\n- **Damage** dealt, **L-cancel** rate and **inputs per minute**.\n\nHold **F4** during a match to see the card live. Tap it on the results screen to dismiss it.\n\nEach finished match (longer than ten seconds) is also added as one line of JSON to\n`match-stats.jsonl` beside the plugin, so you can chart your progress over a session or a month.\nTurn that off in the F2 window if you prefer.\n\nRead-only: it never changes the game.",
+      "author": "PascalPatch",
+      "tags": [
+        "stats",
+        "hud"
+      ],
+      "homepage": null,
+      "abi": 1,
+      "min_runtime": "0.3",
+      "settings": [
+        {
+          "key": "card",
+          "type": "bool",
+          "label": "Show the stats when a match ends",
+          "default": true
+        },
+        {
+          "key": "peek_key",
+          "type": "key",
+          "label": "Hold to see the stats during a match",
+          "default": "F4"
+        },
+        {
+          "key": "history",
+          "type": "bool",
+          "label": "Keep a history file (match-stats.jsonl)",
+          "default": true
+        }
+      ],
+      "icon": null,
+      "changelog": [],
+      "updated": 1790560681
+    },
+    {
+      "id": "tech-trainer",
+      "name": "Tech Trainer",
+      "summary": "Instant feedback on L-cancels, short hops, wavedashes and techs: made it, or how many frames early or late.",
+      "description": "Instant, specific feedback on Melee's timing-heavy techniques, so every attempt teaches you\nsomething:\n\n- **L-cancels**: `Nair L-cancelled (3/7)`, or `L 5 frames early`, `L-cancel: 2 frames late`,\n  `Missed L-cancel`.\n- **Hops**: `Short hop` or `Full hop` off every jump.\n- **Wavedashes**: `Wavedash: frame 1 (perfect), 17 deg`, or which airborne frame the air dodge\n  came on; it also warns when the stick was not angled down.\n- **Techs**: `Teched forward`, or `Missed tech: L/R 6 frames early`.\n\nA tally on the left keeps your success rate for the match (L-cancel 14/17, 82%);\npress **F8** (or the key you choose) to reset it. Coach one port or every human player.\n\nThe windows it checks are the game's own: 7 frames for an L-cancel, 20 for a tech. If you run the\nport with auto L-cancel turned on, every landing counts as cancelled.\n\nRead-only: it never changes the game.",
+      "author": "PascalPatch",
+      "tags": [
+        "hud",
+        "training"
+      ],
+      "homepage": null,
+      "abi": 1,
+      "min_runtime": "0.3",
+      "settings": [
+        {
+          "key": "port",
+          "type": "choice",
+          "label": "Player",
+          "default": "1",
+          "options": [
+            {
+              "value": "1",
+              "label": "Port 1"
+            },
+            {
+              "value": "2",
+              "label": "Port 2"
+            },
+            {
+              "value": "3",
+              "label": "Port 3"
+            },
+            {
+              "value": "4",
+              "label": "Port 4"
+            }
+          ]
+        },
+        {
+          "key": "watch",
+          "type": "choice",
+          "label": "Coach",
+          "default": "player",
+          "options": [
+            {
+              "value": "player",
+              "label": "Just that player"
+            },
+            {
+              "value": "humans",
+              "label": "Every human player"
+            }
+          ]
+        },
+        {
+          "key": "lcancel",
+          "type": "bool",
+          "label": "L-cancels",
+          "default": true
+        },
+        {
+          "key": "hops",
+          "type": "bool",
+          "label": "Short hops and full hops",
+          "default": true
+        },
+        {
+          "key": "wavedash",
+          "type": "bool",
+          "label": "Wavedashes",
+          "default": true
+        },
+        {
+          "key": "techs",
+          "type": "bool",
+          "label": "Techs",
+          "default": true
+        },
+        {
+          "key": "tally",
+          "type": "bool",
+          "label": "Success tally in the corner",
+          "default": true
+        },
+        {
+          "key": "reset_key",
+          "type": "key",
+          "label": "Reset the tally",
+          "default": "F8"
+        },
+        {
+          "key": "opacity",
+          "type": "float",
+          "label": "Opacity",
+          "default": 0.95,
+          "min": 0.3,
+          "max": 1.0
+        }
+      ],
+      "icon": null,
+      "changelog": [],
+      "updated": 1790560681
+    },
+    {
+      "id": "training-lab",
+      "name": "Training Lab",
+      "summary": "Pause, frame advance and slow motion on hotkeys, plus percent reset and lock, infinite shield and endless stocks.",
+      "description": "Practice tools for any match, on hotkeys (rebind them in the F2 window):\n\n- **F5 pause / resume** and **F6 frame advance**: freeze the game and step through a\n  combo or a move one frame at a time. Pair it with Frame Data to see every state change.\n- **F7 slow motion**: half or quarter speed, for learning timings by feel.\n- **F9 reset percent**, or **lock** a player at a set percent to drill a kill confirm or a\n  combo at exactly the percent it works at.\n- **Infinite shield**: shields never shrink or break, for practising out-of-shield options.\n- **Endless stocks**: nobody runs out, so a practice match never ends.\n\nPercent, shield and stock options apply to the player you pick: port 1, port 2 (the default, your\npractice partner), everyone, or only CPU players. Hotkeys only work while the game window has\nfocus and the F2 window is closed.\n\nPause and slow motion hold the game inside the frame; the window, the F2 window and other\nplugins keep running. This plugin writes game memory (percent, shield, stocks) only while those\noptions are on.",
+      "author": "PascalPatch",
+      "tags": [
+        "training",
+        "hotkeys"
+      ],
+      "homepage": null,
+      "abi": 1,
+      "min_runtime": "0.3",
+      "settings": [
+        {
+          "key": "pause_key",
+          "type": "key",
+          "label": "Pause / resume",
+          "default": "F5"
+        },
+        {
+          "key": "step_key",
+          "type": "key",
+          "label": "Frame advance",
+          "default": "F6"
+        },
+        {
+          "key": "slow_key",
+          "type": "key",
+          "label": "Slow motion on / off",
+          "default": "F7"
+        },
+        {
+          "key": "slow_speed",
+          "type": "choice",
+          "label": "Slow motion speed",
+          "default": "half",
+          "options": [
+            {
+              "value": "half",
+              "label": "Half speed"
+            },
+            {
+              "value": "quarter",
+              "label": "Quarter speed"
+            }
+          ]
+        },
+        {
+          "key": "who",
+          "type": "choice",
+          "label": "Percent, shield and stock options apply to",
+          "default": "p2",
+          "options": [
+            {
+              "value": "p1",
+              "label": "Port 1"
+            },
+            {
+              "value": "p2",
+              "label": "Port 2"
+            },
+            {
+              "value": "all",
+              "label": "Everyone"
+            },
+            {
+              "value": "cpu",
+              "label": "CPU players"
+            }
+          ]
+        },
+        {
+          "key": "reset_key",
+          "type": "key",
+          "label": "Reset percent to 0",
+          "default": "F9"
+        },
+        {
+          "key": "lock_percent",
+          "type": "bool",
+          "label": "Lock percent",
+          "default": false
+        },
+        {
+          "key": "percent",
+          "type": "int",
+          "label": "Locked percent",
+          "default": 60,
+          "min": 0,
+          "max": 999
+        },
+        {
+          "key": "infinite_shield",
+          "type": "bool",
+          "label": "Infinite shield",
+          "default": false
+        },
+        {
+          "key": "endless_stocks",
+          "type": "bool",
+          "label": "Endless stocks",
+          "default": false
+        }
+      ],
+      "icon": null,
+      "changelog": [],
+      "updated": 1790560681
+    },
+    {
       "id": "unlock-all",
       "name": "Unlock All",
       "summary": "Every character and stage is selectable from the first boot, without touching your memory card.",
@@ -96,6 +467,7 @@
       ],
       "homepage": null,
       "abi": 1,
+      "min_runtime": null,
       "settings": [
         {
           "key": "characters",
@@ -106,14 +478,18 @@
         {
           "key": "stages",
           "type": "bool",
-          "label": "Unlock every stage on the select screens",
-          "default": true,
-          "help": "Only while choosing, so the game never shows unlock notices."
+          "label": "Unlock every stage",
+          "default": true
         }
       ],
       "icon": null,
-      "changelog": [],
-      "updated": 1790545748
+      "changelog": [
+        {
+          "version": "1.1.0",
+          "notes": "A fresh save no longer boots into a run of \"You got a trophy\" notices: characters, like stages, are unlocked only while a select screen is up."
+        }
+      ],
+      "updated": 1790560681
     }
   ]
 }
