@@ -12,6 +12,16 @@
       "maintainer": "PascalPatch"
     },
     {
+      "id": "di-trainer",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/di-trainer-v1.0.0/di-trainer-1.0.0.zip",
+      "sha256": "09b35c91c17e89ccc2d6a06e6c2162c793b027208089453aee46d6ed2ee885ef",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
       "id": "frame-data",
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/frame-data-v1.0.0/frame-data-1.0.0.zip",
@@ -103,5 +113,5 @@
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "HW/s+5CSEF22XWkV2udhCPP3H2GhayRID6zfAsC6L3UocWtE/gmAuM3nW33196A7w49Do2ZfPMLpYsRNRUtTBw=="
+  "signature": "/vTNlpWehsaQQzOuFABliXRIN8J1YN11SXqif38DGejdb7elYFtBAhunILcr7TKqJDLrb3G7tRf0StKMejPeDw=="
 }
