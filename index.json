@@ -110,8 +110,18 @@
       "compatibility": "offline-only",
       "dependencies": [],
       "maintainer": "PascalPatch"
+    },
+    {
+      "id": "wavedash-trainer",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/wavedash-trainer-v1.0.0/wavedash-trainer-1.0.0.zip",
+      "sha256": "c3fd8ac79f8b44662bb32b320f7983e7d38415c39a9050e5e9b77553742a4329",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "/vTNlpWehsaQQzOuFABliXRIN8J1YN11SXqif38DGejdb7elYFtBAhunILcr7TKqJDLrb3G7tRf0StKMejPeDw=="
+  "signature": "Gwk+VBufqwIU2xPDrCC1kc5jFA3UQfRETTzW9fGn3R/ARjlLAPfOjAQDC9zaCgwqXtcK7ofSmEBbCRX4tdhvDQ=="
 }
