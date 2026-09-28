@@ -1,6 +1,6 @@
 {
   "schema": "pascalpatch/plugin-catalog/1",
-  "generated": 1790583165,
+  "generated": 1790583417,
   "site": "https://dylan-demolder.github.io/pascalpatch-plugins/",
   "plugins": [
     {
@@ -651,24 +651,28 @@
       "settings": [
         {
           "key": "pause_key",
+          "group": "Hotkeys",
           "type": "key",
           "label": "Pause / resume",
           "default": "F5"
         },
         {
           "key": "step_key",
+          "group": "Hotkeys",
           "type": "key",
           "label": "Frame advance",
           "default": "F6"
         },
         {
           "key": "slow_key",
+          "group": "Hotkeys",
           "type": "key",
           "label": "Slow motion on / off",
           "default": "F7"
         },
         {
           "key": "slow_speed",
+          "group": "Hotkeys",
           "type": "choice",
           "label": "Slow motion speed",
           "default": "half",
@@ -684,7 +688,15 @@
           ]
         },
         {
+          "key": "reset_key",
+          "group": "Hotkeys",
+          "type": "key",
+          "label": "Reset percent to 0",
+          "default": "F9"
+        },
+        {
           "key": "who",
+          "group": "Practice",
           "type": "choice",
           "label": "Percent, shield and stock options apply to",
           "default": "p2",
@@ -708,19 +720,15 @@
           ]
         },
         {
-          "key": "reset_key",
-          "type": "key",
-          "label": "Reset percent to 0",
-          "default": "F9"
-        },
-        {
           "key": "lock_percent",
+          "group": "Practice",
           "type": "bool",
           "label": "Lock percent",
           "default": false
         },
         {
           "key": "percent",
+          "group": "Practice",
           "type": "int",
           "label": "Locked percent",
           "default": 60,
@@ -729,30 +737,35 @@
         },
         {
           "key": "infinite_shield",
+          "group": "Practice",
           "type": "bool",
           "label": "Infinite shield",
           "default": false
         },
         {
           "key": "endless_stocks",
+          "group": "Practice",
           "type": "bool",
           "label": "Endless stocks",
           "default": false
         },
         {
           "key": "save_key",
+          "group": "Savestates",
           "type": "key",
           "label": "Save state",
           "default": "End"
         },
         {
           "key": "load_key",
+          "group": "Savestates",
           "type": "key",
           "label": "Load state",
           "default": "Delete"
         },
         {
           "key": "reload",
+          "group": "Savestates",
           "type": "choice",
           "label": "Load the state again on its own",
           "default": "off",
@@ -777,24 +790,28 @@
         },
         {
           "key": "state_dpad",
+          "group": "Savestates",
           "type": "bool",
           "label": "D-pad right saves, D-pad left loads (as in UnclePunch)",
           "default": true
         },
         {
           "key": "dummy",
+          "group": "Dummy",
           "type": "bool",
           "label": "Dummy on when a match starts",
           "default": false
         },
         {
           "key": "dummy_key",
+          "group": "Dummy",
           "type": "key",
           "label": "Dummy on / off",
           "default": "Home"
         },
         {
           "key": "dummy_port",
+          "group": "Dummy",
           "type": "choice",
           "label": "Dummy port (set it to a human player)",
           "default": "p2",
@@ -819,6 +836,7 @@
         },
         {
           "key": "stance",
+          "group": "Dummy",
           "type": "choice",
           "label": "Dummy stands",
           "default": "stand",
@@ -843,6 +861,7 @@
         },
         {
           "key": "di",
+          "group": "Dummy reactions",
           "type": "choice",
           "label": "DI",
           "default": "survival",
@@ -875,6 +894,7 @@
         },
         {
           "key": "sdi",
+          "group": "Dummy reactions",
           "type": "choice",
           "label": "SDI",
           "default": "none",
@@ -895,6 +915,7 @@
         },
         {
           "key": "tech",
+          "group": "Dummy reactions",
           "type": "choice",
           "label": "Tech",
           "default": "random",
@@ -923,6 +944,7 @@
         },
         {
           "key": "getup",
+          "group": "Dummy reactions",
           "type": "choice",
           "label": "Get up (after a missed tech)",
           "default": "random",
@@ -951,6 +973,7 @@
         },
         {
           "key": "counter_hit",
+          "group": "Dummy reactions",
           "type": "choice",
           "label": "When hitstun ends",
           "default": "none",
@@ -1007,6 +1030,7 @@
         },
         {
           "key": "counter_shield",
+          "group": "Dummy reactions",
           "type": "choice",
           "label": "When shield stun ends",
           "default": "none",
@@ -1063,30 +1087,35 @@
         },
         {
           "key": "recover",
+          "group": "Dummy reactions",
           "type": "bool",
           "label": "Recover to the stage when knocked off",
           "default": true
         },
         {
           "key": "mash",
+          "group": "Dummy reactions",
           "type": "bool",
           "label": "Mash out of grabs",
           "default": false
         },
         {
           "key": "record_key",
+          "group": "Recording",
           "type": "key",
           "label": "Record your inputs (start / stop)",
           "default": "PageUp"
         },
         {
           "key": "play_key",
+          "group": "Recording",
           "type": "key",
           "label": "Dummy plays the recording (start / stop)",
           "default": "PageDown"
         },
         {
           "key": "record_port",
+          "group": "Recording",
           "type": "choice",
           "label": "Record the inputs of",
           "default": "p1",
@@ -1111,6 +1140,7 @@
         },
         {
           "key": "loop",
+          "group": "Recording",
           "type": "bool",
           "label": "Loop the playback",
           "default": true
@@ -1123,7 +1153,7 @@
           "notes": "Savestates and a practice dummy (both need PascalPatch 0.5). Savestates: D-pad right (or End) saves the moment, D-pad left (or Delete) puts it back, as often as you like, or have it come back on its own after each try, as a drill. The dummy: pick a human port and it stands, crouches, shields or jumps; DIs (survival, combo, in, out, random) and SDIs; techs in place, toward or away, or misses and gets up the way you choose; answers the end of hitstun or shield stun with an action on the first possible frame (out-of-shield grabs, jump-cancelled up-Bs, spot dodges, nairs...); recovers to the stage when knocked off; mashes out of grabs; and plays back inputs you record (PageUp to record, PageDown to play, Home to switch the dummy on and off)."
         }
       ],
-      "updated": 1790583165
+      "updated": 1790583417
     },
     {
       "id": "unlock-all",
