@@ -1,6 +1,6 @@
 {
   "schema": "pascalpatch/plugin-catalog/1",
-  "generated": 1790560752,
+  "generated": 1790562191,
   "site": "https://dylan-demolder.github.io/pascalpatch-plugins/",
   "plugins": [
     {
@@ -57,7 +57,7 @@
       "id": "frame-data",
       "name": "Frame Data",
       "summary": "Shows each fighter's action state, frame, hitlag and hitstun, and who is plus after every hit or shield.",
-      "description": "Frame data on screen while you play, the way the practice tools in modern fighting games show it.\n\n**State panels.** One small panel per fighter (port 1, ports 1 and 2, or everyone): the character,\nwhat they are doing (\"Nair f7\", \"Guard\", \"DamageFlyN\"), and chips for hitlag, hitstun and\n\"CAN ACT\", the moment the fighter can move again. A thin bar along the bottom is their shield.\n\n**Frame advantage.** Every time an attack connects, on a body or on a shield, the plugin counts\nthe frames until each side can act again and shows the difference under the attacker's panel:\n\n- `Jab on shield -13`: the defender can act 13 frames before you, so they can punish.\n- `Nair on shield -24 (landed 12f later)`: aerials are only as safe as they are low; this one hit\n  12 frames before landing. Hit lower (or L-cancel) and the number climbs.\n- `Usmash: true combo`: the second hit came before the defender could act.\n\nPositive numbers mean you are plus (green), negative mean minus (red). Pausing the game stops the\nclock. Turn on **Show state ids and positions** to see raw action state ids and coordinates, handy\nwhen you are writing a plugin of your own.\n\nRead-only: it never changes the game.",
+      "description": "Frame data on screen while you play, the way the practice tools in modern fighting games show it.\n\n**State panels.** One small panel per fighter (port 1, ports 1 and 2, or everyone): the character,\nwhat they are doing (\"Nair f7\", \"Guard\", \"DamageFlyN\"), and chips for hitlag, hitstun and\n\"CAN ACT\", the moment the fighter can move again. A thin bar along the bottom is their shield.\n\n**Frame advantage.** Every time an attack connects, on a body or on a shield, the plugin counts\nthe frames until each side can act again and shows the difference under the attacker's panel:\n\n- `Jab on shield -10`: the defender can act 10 frames before you, so they can punish.\n- `Nair on shield -24 (landed 12f later)`: aerials are only as safe as they are low; this one hit\n  12 frames before landing. Hit lower (or L-cancel) and the number climbs.\n- `Usmash: true combo`: the second hit came before the defender could act.\n\nPositive numbers mean you are plus (green), negative mean minus (red). Pausing the game stops the\nclock. Turn on **Show state ids and positions** to see raw action state ids and coordinates, handy\nwhen you are writing a plugin of your own.\n\nRead-only: it never changes the game.",
       "author": "PascalPatch",
       "tags": [
         "hud",
@@ -122,8 +122,13 @@
         }
       ],
       "icon": null,
-      "changelog": [],
-      "updated": 1790560681
+      "changelog": [
+        {
+          "version": "1.0.1",
+          "notes": "Shield advantage was 3 to 6 frames too harsh: the defender counted as free as soon as shield hitlag ended. It now waits for shield stun to end (checked frame by frame: Dr. Mario's jab is -10 on shield, not -13)."
+        }
+      ],
+      "updated": 1790562191
     },
     {
       "id": "input-display",

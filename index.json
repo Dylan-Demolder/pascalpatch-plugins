@@ -22,6 +22,16 @@
       "maintainer": "PascalPatch"
     },
     {
+      "id": "frame-data",
+      "version": "1.0.1",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/frame-data-v1.0.1/frame-data-1.0.1.zip",
+      "sha256": "b03ef2c82ca30d5e440c5d8d64d1c7d3bea6f27d628935a6b7aff58464c24a20",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
       "id": "input-display",
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/input-display-v1.0.0/input-display-1.0.0.zip",
@@ -83,5 +93,5 @@
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "bZkh3/m5ULRhjPmwbzeB7+vtAKy5XVW0zxgXfLwcdDMaPBEeyPWmZAUvgJ7xrkutDIiGbZUDShDDFK/2712VDQ=="
+  "signature": "9R/V+iRl4Egrh9TR2t0appK/4TvM6z1PyMHPc6uPdCyiaSShSP9KHijFe48kh/lADi4IuyU5eWPuEnk5WUzIBw=="
 }
