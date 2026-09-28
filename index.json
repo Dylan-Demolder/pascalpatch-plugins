@@ -52,6 +52,16 @@
       "maintainer": "PascalPatch"
     },
     {
+      "id": "info-display",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/info-display-v1.0.0/info-display-1.0.0.zip",
+      "sha256": "c4fdc5e7752deaa9b01ff0a969be394193f45d15f43a7501df071e7e43913044",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
       "id": "input-display",
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/input-display-v1.0.0/input-display-1.0.0.zip",
@@ -123,5 +133,5 @@
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "Gwk+VBufqwIU2xPDrCC1kc5jFA3UQfRETTzW9fGn3R/ARjlLAPfOjAQDC9zaCgwqXtcK7ofSmEBbCRX4tdhvDQ=="
+  "signature": "J5+WTsL462k3sqy//xdCX/YhEr13t2o+yjV1BBzKbZ03CBrCEqMgjKAuM+/s1JREJjAMnzFBOxA/zIwWz6EbAA=="
 }
