@@ -32,6 +32,16 @@
       "maintainer": "PascalPatch"
     },
     {
+      "id": "hitbox-viewer",
+      "version": "1.0.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/hitbox-viewer-v1.0.0/hitbox-viewer-1.0.0.zip",
+      "sha256": "e2e40eb6fdace7eb556c0324e83739491ce810e79c4161dc1cabcf4490228118",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
       "id": "input-display",
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/input-display-v1.0.0/input-display-1.0.0.zip",
@@ -93,5 +103,5 @@
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "9R/V+iRl4Egrh9TR2t0appK/4TvM6z1PyMHPc6uPdCyiaSShSP9KHijFe48kh/lADi4IuyU5eWPuEnk5WUzIBw=="
+  "signature": "HW/s+5CSEF22XWkV2udhCPP3H2GhayRID6zfAsC6L3UocWtE/gmAuM3nW33196A7w49Do2ZfPMLpYsRNRUtTBw=="
 }

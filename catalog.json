@@ -1,6 +1,6 @@
 {
   "schema": "pascalpatch/plugin-catalog/1",
-  "generated": 1790562191,
+  "generated": 1790563046,
   "site": "https://dylan-demolder.github.io/pascalpatch-plugins/",
   "plugins": [
     {
@@ -129,6 +129,52 @@
         }
       ],
       "updated": 1790562191
+    },
+    {
+      "id": "hitbox-viewer",
+      "name": "Hitbox Viewer",
+      "summary": "Draws every fighter's hitboxes and hurtboxes over the game, with invincibility and intangibility shown in colour.",
+      "description": "Hitbox Viewer draws what the game actually tests for collisions, on top of the match.\n\n- **Red** capsules are hitboxes. Each is drawn from where it was last frame to where it is now, because the game checks that whole swept shape.\n- **Purple** capsules are grab boxes.\n- **Yellow** capsules are hurtboxes: the parts of a fighter that can be hit.\n- **Green** hurtboxes are invincible: hits connect but do nothing, as in the first frames of a ledge grab.\n- **Blue** hurtboxes are intangible: hits pass straight through, as in rolls, spot dodges and air dodges.\n\nPress **F3** to show or hide the boxes. You can change the key, turn either kind off, or make them fainter in the plugin's settings.\n\nIt pairs well with Training Lab: pause with F5 and step with F6 to see exactly which frame a move comes out, or where a dodge stops being intangible.\n\nThe boxes are projected with the game's own camera, so they follow zooms and camera shakes. The plugin only reads game memory; it changes nothing.",
+      "author": "PascalPatch",
+      "tags": [
+        "hud",
+        "training",
+        "frame data"
+      ],
+      "homepage": null,
+      "abi": 1,
+      "min_runtime": "0.3",
+      "settings": [
+        {
+          "key": "hitboxes",
+          "type": "bool",
+          "label": "Hitboxes",
+          "default": true
+        },
+        {
+          "key": "hurtboxes",
+          "type": "bool",
+          "label": "Hurtboxes",
+          "default": true
+        },
+        {
+          "key": "toggle_key",
+          "type": "key",
+          "label": "Show / hide",
+          "default": "F3"
+        },
+        {
+          "key": "opacity",
+          "type": "float",
+          "label": "Opacity",
+          "default": 0.9,
+          "min": 0.2,
+          "max": 1.0
+        }
+      ],
+      "icon": null,
+      "changelog": [],
+      "updated": 1790563046
     },
     {
       "id": "input-display",
