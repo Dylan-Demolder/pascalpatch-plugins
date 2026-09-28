@@ -132,6 +132,16 @@
       "maintainer": "PascalPatch"
     },
     {
+      "id": "training-lab",
+      "version": "1.1.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/training-lab-v1.1.0/training-lab-1.1.0.zip",
+      "sha256": "c9169ac02ff07a7b8c74c7674f3a03a5e46a3a9b0928cfa0898c1c710d445e1a",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
       "id": "unlock-all",
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/unlock-all-v1.0.0/unlock-all-1.0.0.zip",
@@ -173,5 +183,5 @@
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "k0hKpZ+O9RzQc38tP1rShJof4tUfZ4rfrG6cxbm9WWEI3wtXHEuBTflTciupERtEtp4IjooQa5Eo6oAgf4RJDg=="
+  "signature": "+2UR38ofyP517jVDywIDM5S8oxuecN+QwajgL49l/FneFjIFX8VSS8yzF1/PvPJ/VuzVPR+mRsIohr/DloqNDQ=="
 }
