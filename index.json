@@ -135,7 +135,7 @@
       "id": "training-lab",
       "version": "1.1.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/training-lab-v1.1.0/training-lab-1.1.0.zip",
-      "sha256": "6355e047453225f808e212348746f394f0a685236f02ef9dfa08e5095a39cc09",
+      "sha256": "eb9671d8db984bf3a5a4c34996fe61e0524862ee0996f5dce8ec1f91f4239262",
       "license": "GPL-2.0-or-later",
       "compatibility": "offline-only",
       "dependencies": [],
@@ -183,5 +183,5 @@
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "OlC23VfCQC262XgJMdwUfLEcX6L8v8plWSf35tswxks0N4Lhg/C+sZjCfY+kqRrujLrTTOtYlMHt5aZa8Vp0Dg=="
+  "signature": "6qzlu16oseuRRPUJPbUDiQUyLCHMRAAAFfPmfpkf2p5hqPenA2XBNVdBqLfaS0n+Qe4oSPryWxFgr82gnWAmAQ=="
 }

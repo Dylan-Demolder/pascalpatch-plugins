@@ -1,6 +1,6 @@
 {
   "schema": "pascalpatch/plugin-catalog/1",
-  "generated": 1790583006,
+  "generated": 1790583165,
   "site": "https://dylan-demolder.github.io/pascalpatch-plugins/",
   "plugins": [
     {
@@ -638,7 +638,7 @@
       "id": "training-lab",
       "name": "Training Lab",
       "summary": "Pause, frame advance, slow motion, savestates, percent lock and infinite shield, plus a practice dummy that DIs, techs, gets up, counter-attacks out of hitstun and shield, recovers, and plays back your inputs.",
-      "description": "Practice tools for any match, on hotkeys (rebind them in the F2 window):\n\n- **F5 pause / resume** and **F6 frame advance**: freeze the game and step through a\n  combo or a move one frame at a time. Pair it with Frame Data to see every state change.\n- **F7 slow motion**: half or quarter speed, for learning timings by feel.\n- **F9 reset percent**, or **lock** a player at a set percent to drill a kill confirm or a\n  combo at exactly the percent it works at.\n- **Infinite shield**: shields never shrink or break, for practising out-of-shield options.\n- **Endless stocks**: nobody runs out, so a practice match never ends.\n- **Savestates** (PascalPatch 0.5): **D-pad right** (or **End**) saves the moment, **D-pad left**\n  (or **Delete**) puts it back: both fighters, their percents, the stage, the timer, everything.\n  Set up a situation once and replay it as often as you like, as in UnclePunch's Training Mode.\n  A state belongs to the match it was saved in.\n\nPercent, shield and stock options apply to the player you pick: port 1, port 2 (the default, your\npractice partner), everyone, or only CPU players. Hotkeys only work while the game window has\nfocus and the F2 window is closed.\n\n## The dummy\n\nOn PascalPatch 0.5, Training Lab can play a practice partner for you, in the spirit of\nUnclePunch's Training Mode. Set up a match with the dummy's port (port 2 by default) as a\n**human** player, then press **Home** to hand that port to the dummy (or turn it on for every\nmatch in the settings). It plays through the port's controller, so it is held to the same rules\nas you are:\n\n- **Stance**: stands, crouches (for crouch-cancel practice), holds shield, or keeps jumping.\n- **DI**: survival (up and in), combo (down and away), in, out, or random per hit; plus\n  **SDI** during hitlag, some or as much as possible.\n- **Techs**: in place, toward you, away, never, or random (misses included), wherever it lands,\n  platforms too. After a missed tech it **gets up** the way you pick: stand, roll either way,\n  getup attack, or random, on the first possible frame, for tech-chase practice.\n- **Counter-actions**: when hitstun ends, or when shield stun ends, it jumps, nairs, grabs,\n  spot dodges, rolls, up-Bs, down-Bs, air dodges or attacks, on the first possible frame: out of\n  shield that means a frame-1 shield grab, or a jump-cancelled up-B or shine, so you learn what\n  is safe on shield and what is not.\n- **Recovery**: knocked off Battlefield, Final Destination, Dream Land, Yoshi's Story, Fountain\n  of Dreams or Pokemon Stadium, it double jumps back and up-Bs, for edge-guard practice.\n- **Mash out of grabs**, so you learn which throws and pummels you really get.\n- **Record and play back**: press **PageUp** to record your own inputs (up to 20 seconds; press\n  it again to stop), then **PageDown** to have the dummy play them back, once or on a loop,\n  mirrored when it faces the other way. Record a pressure string, then practise against it.\n\nA badge in the bottom-left corner shows what the dummy is doing. Only teching touches game\nmemory: the dummy marks a well-timed L/R press in its tech timer, because when a tumble ends\ndepends on where it lands.\n\nPause and slow motion hold the game inside the frame; the window, the F2 window and other\nplugins keep running. This plugin writes game memory (percent, shield, stocks, the tech timer,\na loaded state) only while those options are on or when you load.",
+      "description": "Practice tools for any match, on hotkeys (rebind them in the F2 window):\n\n- **F5 pause / resume** and **F6 frame advance**: freeze the game and step through a\n  combo or a move one frame at a time. Pair it with Frame Data to see every state change.\n- **F7 slow motion**: half or quarter speed, for learning timings by feel.\n- **F9 reset percent**, or **lock** a player at a set percent to drill a kill confirm or a\n  combo at exactly the percent it works at.\n- **Infinite shield**: shields never shrink or break, for practising out-of-shield options.\n- **Endless stocks**: nobody runs out, so a practice match never ends.\n- **Savestates** (PascalPatch 0.5): **D-pad right** (or **End**) saves the moment, **D-pad left**\n  (or **Delete**) puts it back: both fighters, their percents, the stage, the timer, everything.\n  Set up a situation once and replay it as often as you like, as in UnclePunch's Training Mode.\n  A state belongs to the match it was saved in.\n- **Drills**: have the state come back on its own, when the exchange is over (the dummy's port\n  is free again, or KO'd) or after 3 or 5 seconds, with a try counter. Save the moment before\n  your pressure, your edge-guard or your tech chase starts, and run it again and again.\n\nPercent, shield and stock options apply to the player you pick: port 1, port 2 (the default, your\npractice partner), everyone, or only CPU players. Hotkeys only work while the game window has\nfocus and the F2 window is closed.\n\n## The dummy\n\nOn PascalPatch 0.5, Training Lab can play a practice partner for you, in the spirit of\nUnclePunch's Training Mode. Set up a match with the dummy's port (port 2 by default) as a\n**human** player, then press **Home** to hand that port to the dummy (or turn it on for every\nmatch in the settings). It plays through the port's controller, so it is held to the same rules\nas you are:\n\n- **Stance**: stands, crouches (for crouch-cancel practice), holds shield, or keeps jumping.\n- **DI**: survival (up and in), combo (down and away), in, out, or random per hit; plus\n  **SDI** during hitlag, some or as much as possible.\n- **Techs**: in place, toward you, away, never, or random (misses included), wherever it lands,\n  platforms too. After a missed tech it **gets up** the way you pick: stand, roll either way,\n  getup attack, or random, on the first possible frame, for tech-chase practice.\n- **Counter-actions**: when hitstun ends, or when shield stun ends, it jumps, nairs, grabs,\n  spot dodges, rolls, up-Bs, down-Bs, air dodges or attacks, on the first possible frame: out of\n  shield that means a frame-1 shield grab, or a jump-cancelled up-B or shine, so you learn what\n  is safe on shield and what is not.\n- **Recovery**: knocked off Battlefield, Final Destination, Dream Land, Yoshi's Story, Fountain\n  of Dreams or Pokemon Stadium, it double jumps back and up-Bs, for edge-guard practice.\n- **Mash out of grabs**, so you learn which throws and pummels you really get.\n- **Record and play back**: press **PageUp** to record your own inputs (up to 20 seconds; press\n  it again to stop), then **PageDown** to have the dummy play them back, once or on a loop,\n  mirrored when it faces the other way. Record a pressure string, then practise against it.\n\nA badge in the bottom-left corner shows what the dummy is doing. Only teching touches game\nmemory: the dummy marks a well-timed L/R press in its tech timer, because when a tumble ends\ndepends on where it lands.\n\nPause and slow motion hold the game inside the frame; the window, the F2 window and other\nplugins keep running. This plugin writes game memory (percent, shield, stocks, the tech timer,\na loaded state) only while those options are on or when you load.",
       "author": "PascalPatch",
       "tags": [
         "training",
@@ -750,6 +750,30 @@
           "type": "key",
           "label": "Load state",
           "default": "Delete"
+        },
+        {
+          "key": "reload",
+          "type": "choice",
+          "label": "Load the state again on its own",
+          "default": "off",
+          "options": [
+            {
+              "value": "off",
+              "label": "Never"
+            },
+            {
+              "value": "exchange",
+              "label": "When the exchange is over (the dummy's port is free again, or KO'd)"
+            },
+            {
+              "value": "3s",
+              "label": "After 3 seconds"
+            },
+            {
+              "value": "5s",
+              "label": "After 5 seconds"
+            }
+          ]
         },
         {
           "key": "state_dpad",
@@ -1096,10 +1120,10 @@
       "changelog": [
         {
           "version": "1.1.0",
-          "notes": "Savestates and a practice dummy (both need PascalPatch 0.5). Savestates: D-pad right (or End) saves the moment, D-pad left (or Delete) puts it back, as often as you like. The dummy: pick a human port and it stands, crouches, shields or jumps; DIs (survival, combo, in, out, random) and SDIs; techs in place, toward or away, or misses and gets up the way you choose; answers the end of hitstun or shield stun with an action on the first possible frame (out-of-shield grabs, jump-cancelled up-Bs, spot dodges, nairs...); recovers to the stage when knocked off; mashes out of grabs; and plays back inputs you record (PageUp to record, PageDown to play, Home to switch the dummy on and off)."
+          "notes": "Savestates and a practice dummy (both need PascalPatch 0.5). Savestates: D-pad right (or End) saves the moment, D-pad left (or Delete) puts it back, as often as you like, or have it come back on its own after each try, as a drill. The dummy: pick a human port and it stands, crouches, shields or jumps; DIs (survival, combo, in, out, random) and SDIs; techs in place, toward or away, or misses and gets up the way you choose; answers the end of hitstun or shield stun with an action on the first possible frame (out-of-shield grabs, jump-cancelled up-Bs, spot dodges, nairs...); recovers to the stage when knocked off; mashes out of grabs; and plays back inputs you record (PageUp to record, PageDown to play, Home to switch the dummy on and off)."
         }
       ],
-      "updated": 1790583006
+      "updated": 1790583165
     },
     {
       "id": "unlock-all",
