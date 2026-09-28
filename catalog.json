@@ -1,6 +1,6 @@
 {
   "schema": "pascalpatch/plugin-catalog/1",
-  "generated": 1790578483,
+  "generated": 1790580379,
   "site": "https://dylan-demolder.github.io/pascalpatch-plugins/",
   "plugins": [
     {
@@ -168,11 +168,15 @@
       "icon": null,
       "changelog": [
         {
+          "version": "1.0.2",
+          "notes": "On PascalPatch 0.5 the state panels share the top corners with other plugins' panels instead of drawing over them."
+        },
+        {
           "version": "1.0.1",
           "notes": "Shield advantage was 3 to 6 frames too harsh: the defender counted as free as soon as shield hitlag ended. It now waits for shield stun to end (checked frame by frame: Dr. Mario's jab is -10 on shield, not -13)."
         }
       ],
-      "updated": 1790562191
+      "updated": 1790580378
     },
     {
       "id": "hitbox-viewer",
@@ -365,8 +369,13 @@
         }
       ],
       "icon": null,
-      "changelog": [],
-      "updated": 1790578483
+      "changelog": [
+        {
+          "version": "1.0.1",
+          "notes": "On PascalPatch 0.5 the panels share the top corners with other plugins' panels instead of drawing over them."
+        }
+      ],
+      "updated": 1790580379
     },
     {
       "id": "input-display",
@@ -490,8 +499,8 @@
     {
       "id": "tech-trainer",
       "name": "Tech Trainer",
-      "summary": "Instant feedback on L-cancels, short hops, wavedashes and techs: made it, or how many frames early or late.",
-      "description": "Instant, specific feedback on Melee's timing-heavy techniques, so every attempt teaches you\nsomething:\n\n- **L-cancels**: `Nair L-cancelled (3/7)`, or `L 5 frames early`, `L-cancel: 2 frames late`,\n  `Missed L-cancel`.\n- **Hops**: `Short hop` or `Full hop` off every jump.\n- **Wavedashes**: `Wavedash: frame 1 (perfect), 17 deg`, or which airborne frame the air dodge\n  came on; it also warns when the stick was not angled down.\n- **Techs**: `Teched forward`, or `Missed tech: L/R 6 frames early`.\n\nA tally on the left keeps your success rate for the match (L-cancel 14/17, 82%);\npress **F8** (or the key you choose) to reset it. Coach one port or every human player.\n\nThe windows it checks are the game's own: 7 frames for an L-cancel, 20 for a tech. If you run the\nport with auto L-cancel turned on, every landing counts as cancelled.\n\nRead-only: it never changes the game.",
+      "summary": "Instant feedback on L-cancels, short hops, wavedashes, techs, out-of-shield timing, powershields, ledgedashes, SDI and fastfalls.",
+      "description": "Instant, specific feedback on Melee's timing-heavy techniques, so every attempt teaches you\nsomething:\n\n- **L-cancels**: `Nair L-cancelled (3/7)`, or `L 5 frames early`, `L-cancel: 2 frames late`,\n  `Missed L-cancel`.\n- **Hops**: `Short hop` or `Full hop` off every jump.\n- **Wavedashes**: `Wavedash: frame 1 (perfect), 17 deg`, or which airborne frame the air dodge\n  came on; it also warns when the stick was not angled down.\n- **Techs**: `Teched forward`, or `Missed tech: L/R 6 frames early`.\n- **Out of shield**: `Out of shield: Jump on frame 1 (no delay)`, or how many frames you waited\n  after shield stun ended.\n- **Powershields**: `Powershield! (frame 3 of 8)`, or `Powershield: L/R 2 frames too early`.\n- **Ledgedashes**: `Ledgedash: 7 frames intangible after the lag (jump f2, dodge f1)`, or how\n  long the landing was open to hits.\n- **SDI**: `SDI: 4 inputs in 9 frames of hitlag, moved 24`, or `No SDI` on a long hitlag.\n- **Fastfalls** (off by default): `Fastfall: frame 1 after the peak`.\n\nEach one can be turned off in the settings.\n\nA tally on the left keeps your success rate for the match (L-cancel 14/17, 82%, powershields, ledgedashes);\npress **F8** (or the key you choose) to reset it. Coach one port or every human player.\n\nThe windows it checks are the game's own: 7 frames for an L-cancel, 20 for a tech. If you run the\nport with auto L-cancel turned on, every landing counts as cancelled.\n\nRead-only: it never changes the game.",
       "author": "PascalPatch",
       "tags": [
         "hud",
@@ -566,6 +575,36 @@
           "default": true
         },
         {
+          "key": "oos",
+          "type": "bool",
+          "label": "Out of shield timing",
+          "default": true
+        },
+        {
+          "key": "powershield",
+          "type": "bool",
+          "label": "Powershields",
+          "default": true
+        },
+        {
+          "key": "ledgedash",
+          "type": "bool",
+          "label": "Ledgedashes",
+          "default": true
+        },
+        {
+          "key": "sdi",
+          "type": "bool",
+          "label": "SDI during hitlag",
+          "default": true
+        },
+        {
+          "key": "fastfall",
+          "type": "bool",
+          "label": "Fastfall timing",
+          "default": false
+        },
+        {
           "key": "tally",
           "type": "bool",
           "label": "Success tally in the corner",
@@ -587,8 +626,13 @@
         }
       ],
       "icon": null,
-      "changelog": [],
-      "updated": 1790560681
+      "changelog": [
+        {
+          "version": "1.1.0",
+          "notes": "Five new coaches, after UnclePunch's Training Mode: out-of-shield timing (the first action after shield stun and on which frame), powershields (or how many frames early the L/R press was), ledgedashes (intangibility left once the landing lag ends), SDI (inputs during hitlag and the distance moved) and fastfall timing (frames after the jump's peak). On PascalPatch 0.5 the tally shares the corner with other plugins' panels."
+        }
+      ],
+      "updated": 1790580379
     },
     {
       "id": "training-lab",
@@ -811,8 +855,13 @@
         }
       ],
       "icon": null,
-      "changelog": [],
-      "updated": 1790571154
+      "changelog": [
+        {
+          "version": "1.0.1",
+          "notes": "The verdict and the tip now sit inside the breakdown panel (wrapped to fit), so they no longer land on Tech Trainer's lines; on PascalPatch 0.5 the panel shares its corner with other plugins' panels."
+        }
+      ],
+      "updated": 1790580379
     }
   ]
 }

@@ -42,6 +42,16 @@
       "maintainer": "PascalPatch"
     },
     {
+      "id": "frame-data",
+      "version": "1.0.2",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/frame-data-v1.0.2/frame-data-1.0.2.zip",
+      "sha256": "1992d9ba7acdde67227ec2800e4576490692cb6318cad887641095c080c8b779",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
       "id": "hitbox-viewer",
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/hitbox-viewer-v1.0.0/hitbox-viewer-1.0.0.zip",
@@ -56,6 +66,16 @@
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/info-display-v1.0.0/info-display-1.0.0.zip",
       "sha256": "c4fdc5e7752deaa9b01ff0a969be394193f45d15f43a7501df071e7e43913044",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
+      "id": "info-display",
+      "version": "1.0.1",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/info-display-v1.0.1/info-display-1.0.1.zip",
+      "sha256": "3787229aa505bfac7f4b036510990bf420855350f5a27afdee354a35804d4cfc",
       "license": "GPL-2.0-or-later",
       "compatibility": "offline-only",
       "dependencies": [],
@@ -86,6 +106,16 @@
       "version": "1.0.0",
       "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/tech-trainer-v1.0.0/tech-trainer-1.0.0.zip",
       "sha256": "3622383563106874788574d7376873577a4af306018318940895f7c8bff3cf58",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
+    },
+    {
+      "id": "tech-trainer",
+      "version": "1.1.0",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/tech-trainer-v1.1.0/tech-trainer-1.1.0.zip",
+      "sha256": "fdb0d03b001d9c81878cb0a1c7847062cf64d197b5db26398213fe0340a2e42a",
       "license": "GPL-2.0-or-later",
       "compatibility": "offline-only",
       "dependencies": [],
@@ -130,8 +160,18 @@
       "compatibility": "offline-only",
       "dependencies": [],
       "maintainer": "PascalPatch"
+    },
+    {
+      "id": "wavedash-trainer",
+      "version": "1.0.1",
+      "source": "https://github.com/Dylan-Demolder/pascalpatch-plugins/releases/download/wavedash-trainer-v1.0.1/wavedash-trainer-1.0.1.zip",
+      "sha256": "88d957948b451baf4f54b9ba061b42a126f2f2c66df63f339f09de9e5d08ae35",
+      "license": "GPL-2.0-or-later",
+      "compatibility": "offline-only",
+      "dependencies": [],
+      "maintainer": "PascalPatch"
     }
   ],
   "key_id": "bae2cb542510218e",
-  "signature": "J5+WTsL462k3sqy//xdCX/YhEr13t2o+yjV1BBzKbZ03CBrCEqMgjKAuM+/s1JREJjAMnzFBOxA/zIwWz6EbAA=="
+  "signature": "k0hKpZ+O9RzQc38tP1rShJof4tUfZ4rfrG6cxbm9WWEI3wtXHEuBTflTciupERtEtp4IjooQa5Eo6oAgf4RJDg=="
 }
